@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BC13A4F-3EB1-4D7C-8C1D-0885220BA64A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LibraryManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>LibraryManagementSystem</RootNamespace>
+    <AssemblyName>LibraryManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LibraryManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LibraryManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 9.4\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbConnector.vb" />
+    <Compile Include="frmAddBook.Designer.vb">
+      <DependentUpon>frmAddBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.vb">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminDashboard.Designer.vb">
+      <DependentUpon>frmAdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLibrarianDashboard.Designer.vb">
+      <DependentUpon>frmLibrarianDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibrarianDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServerMonitor.Designer.vb">
+      <DependentUpon>frmServerMonitor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServerMonitor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentDashboard.Designer.vb">
+      <DependentUpon>frmStudentDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper.vb" />
+    <Compile Include="Session.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ucBookList.Designer.vb">
+      <DependentUpon>ucBookList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBookList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBookSearch.Designer.vb">
+      <DependentUpon>ucBookSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBookSearch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBorrow.Designer.vb">
+      <DependentUpon>ucBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBorrow.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBorrowLibrarian.Designer.vb">
+      <DependentUpon>ucBorrowLibrarian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBorrowLibrarian.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBorrowRecords.Designer.vb">
+      <DependentUpon>ucBorrowRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBorrowRecords.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManageLibrarians.Designer.vb">
+      <DependentUpon>ucManageLibrarians.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucManageLibrarians.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManageStudents.Designer.vb">
+      <DependentUpon>ucManageStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucManageStudents.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMyHistory.Designer.vb">
+      <DependentUpon>ucMyHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucMyHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReports.Designer.vb">
+      <DependentUpon>ucReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReturn.Designer.vb">
+      <DependentUpon>ucReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucReturn.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAddBook.resx">
+      <DependentUpon>frmAddBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibrarianDashboard.resx">
+      <DependentUpon>frmLibrarianDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServerMonitor.resx">
+      <DependentUpon>frmServerMonitor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentDashboard.resx">
+      <DependentUpon>frmStudentDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBookList.resx">
+      <DependentUpon>ucBookList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBookSearch.resx">
+      <DependentUpon>ucBookSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBorrow.resx">
+      <DependentUpon>ucBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBorrowLibrarian.resx">
+      <DependentUpon>ucBorrowLibrarian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBorrowRecords.resx">
+      <DependentUpon>ucBorrowRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucManageLibrarians.resx">
+      <DependentUpon>ucManageLibrarians.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucManageStudents.resx">
+      <DependentUpon>ucManageStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMyHistory.resx">
+      <DependentUpon>ucMyHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReports.resx">
+      <DependentUpon>ucReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReturn.resx">
+      <DependentUpon>ucReturn.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
